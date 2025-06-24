@@ -4,10 +4,10 @@ import tkinter as tk
 
 #imufile = 'dcs.txt'
 
-IMU_CODE_FILE_PATH = 'C:/Sandbox/SC3_2SE/View_SW_Development/SwEntities/Application/Imu/ImuSgPoolMgr/Implementation/Source/'
+IMU_CODE_FILE_PATH = r'D:\Python\IMU_test'
 
-imufile = IMU_CODE_FILE_PATH + 'ImuSgPoolMgr.c'
-codefile = r"C:/2,MyFolder/Python/test_code/IMU test/"+ "IMU测试模拟输入.c"
+imufile = os.path.join(IMU_CODE_FILE_PATH, 'ImuSgPoolMgr.c')
+codefile = os.path.join(IMU_CODE_FILE_PATH, 'IMU测试模拟输入.c')
 
 
 sensitivity = {"Primary_LOG":"5000","Primary_ARS":"100","Primary_dir":"1",
@@ -181,5 +181,5 @@ if __name__ == "__main__":
     prn_output.grid(row=4, column=0, columnspan=5, padx=20, pady=0,sticky="w")  # 使用 grid 布局 
 
     tk.mainloop()
-    
+
 
